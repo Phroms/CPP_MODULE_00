@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrimald <agrimald@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 18:13:41 by agrimald          #+#    #+#             */
-/*   Updated: 2024/06/20 18:13:42 by agrimald         ###   ########.fr       */
+/*   Created: 2024/06/20 18:55:12 by agrimald          #+#    #+#             */
+/*   Updated: 2024/06/20 18:55:14 by agrimald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.h"
+#include "contact.h"
 
-Phonebook::Phonebook()
+int main()
 {
-}
+	Data prueba;
 
-void    max_contacts(const std::string& contact)
-{
-    if (size_phonebook == 8)
-    {
-        for (int i = 0; i < 7; ++i)
-            contacts[i] = contacts[i + 1];
-        size_phonebook--;
-    }
-    contacts[size_phonebook] = contact;
-    size_phonebook++;
-}
-
-Phonebook::~Phonebook()
-{
+	prueba.set_firstname(prueba.show_msg("First Name: "));
+	prueba.set_lastname(prueba.show_msg("Last Name: "));
+	prueba.set_nickname(prueba.show_msg("Nick Name: "));
+	prueba.set_phonenumber(prueba.show_msg("Phone Number: "));
+	prueba.set_darkestsecret(prueba.show_msg("Darkest Secret: "));
+	print_arguments(&prueba);
+    max_contacts(&prueba);
+	return (0);
 }
