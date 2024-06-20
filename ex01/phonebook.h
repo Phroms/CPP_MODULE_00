@@ -5,29 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrimald <agrimald@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 18:07:06 by agrimald          #+#    #+#             */
-/*   Updated: 2024/06/13 20:03:56 by agrimald         ###   ########.fr       */
+/*   Created: 2024/06/17 18:03:34 by agrimald          #+#    #+#             */
+/*   Updated: 2024/06/17 19:13:54 by agrimald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
-#include <string>
-#include <iostream>
+# include <iostream>
+# include <stdlib.h>
+# include <string>
 
-class MyClass {
-	std::string setPerso;
-	std::string setNumber;
-public:
-	MyClass();
-	MyClass(std::string, std::string);
-	MyClass(const MyClass&);
-
-	std::string getSetPerso();
-	std::string getSetNumber();
-	bool SetPerso(std::string);
-	bool SetNumber(std::string);
+class Data
+{
+	private:
+		std::string firstName;
+		std::string lastName;
+		std::string nickName;
+		std::string phoneNumber;
+		std::string darkestSecret;
+	public:
+		Data();
+		~Data();
+		std::string variable_value(Data *contact, std::string value);
+		std::string show_msg(std::string printmsg);
+		void	print_arguments(Data *contend);
+		void	set_firstname(std::string name);
+		void	set_lastname(std::string last);
+		void	set_nickname(std::string nick);
+		void	set_phonenumber(std::string number);
+		void	set_darkestsecret(std::string secret);
+		/*std::string getFirstName();
+		std::string getLastName();
+		std::string getNickName();
+		std::string getPhoneNumber();
+		std::string getDarkestSecret();*/
 };
-
 #endif
