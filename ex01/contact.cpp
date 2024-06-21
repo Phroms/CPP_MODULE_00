@@ -47,7 +47,7 @@ std::string Data::show_msg(std::string printmsg)
 	return (print);
 }
 
-void	print_arguments(Data *contend)
+void	Data::print_contact(Data *contend)
 {
 	/*
 	contend->firstName = funcion2("First Name: ");
@@ -84,40 +84,7 @@ void	Data::set_darkestsecret(std::string secret)
 	this->darkestSecret = secret;
 }
 	
-/*std::string Data::getFirstName(void)
-{
-	return (this->firstName);
-}
-std::string Data::getLastName(void)
-{
-	return (this->lastName);
-}
-std::string Data::getNickName(void)
-{
-	return (this->nickName);
-}
-std::string Data::getPhoneNumber(void)
-{
-	return (this->phoneNumber);
-}
-std::string Data::getDarkestSecret(void)
-{
-	return (this->darkestSecret);
-}*/
 
 Data::~Data()
 {
 }
-
-/*int main()
-{
-	Data prueba;
-
-	prueba.set_firstname(prueba.show_msg("First Name: "));
-	prueba.set_lastname(prueba.show_msg("Last Name: "));
-	prueba.set_nickname(prueba.show_msg("Nick Name: "));
-	prueba.set_phonenumber(prueba.show_msg("Phone Number: "));
-	prueba.set_darkestsecret(prueba.show_msg("Darkest Secret: "));
-	print_arguments(&prueba);
-	return (0);
-}*/

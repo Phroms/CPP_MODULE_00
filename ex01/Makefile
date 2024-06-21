@@ -15,7 +15,7 @@ CPP = g++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
 
-SRC = contact.cpp phonebook.cpp
+SRC = main.cpp contact.cpp phonebook.cpp
 
 OBJECTS = $(SRC:.cpp=.o)
 

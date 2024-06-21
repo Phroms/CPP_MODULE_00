@@ -17,14 +17,16 @@
 # include <stdlib.h>
 # include <string>
 
+#include "contact.h"
+
 class Phonebook
 {
     private:
-        std::string contacts[8];
+        Data  cont[8];
         int size_phonebook;
     public:
         Phonebook();
         ~Phonebook();
-        void    max_contacts(const std::string& contact);
+        void    max_contacts(Data *contact);
 };
 #endif

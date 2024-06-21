@@ -16,13 +16,15 @@
 int main()
 {
 	Data prueba;
+	Phonebook  phonebook;
 
+	init_program()
 	prueba.set_firstname(prueba.show_msg("First Name: "));
 	prueba.set_lastname(prueba.show_msg("Last Name: "));
 	prueba.set_nickname(prueba.show_msg("Nick Name: "));
 	prueba.set_phonenumber(prueba.show_msg("Phone Number: "));
 	prueba.set_darkestsecret(prueba.show_msg("Darkest Secret: "));
-	print_arguments(&prueba);
-    max_contacts(&prueba);
+	//print_contact(&prueba);
+	//phonebook.max_contacts(prueba.variable_value(&prueba,  "firstname"));    
 	return (0);
 }

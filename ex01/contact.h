@@ -30,16 +30,11 @@ class Data
 		~Data();
 		std::string variable_value(Data *contact, std::string value);
 		std::string show_msg(std::string printmsg);
-		void	print_arguments(Data *contend);
+		void	print_contact(Data *contend);
 		void	set_firstname(std::string name);
 		void	set_lastname(std::string last);
 		void	set_nickname(std::string nick);
 		void	set_phonenumber(std::string number);
 		void	set_darkestsecret(std::string secret);
-		/*std::string getFirstName();
-		std::string getLastName();
-		std::string getNickName();
-		std::string getPhoneNumber();
-		std::string getDarkestSecret();*/
 };
 #endif
