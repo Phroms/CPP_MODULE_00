@@ -6,13 +6,13 @@
 #    By: agrimald <agrimald@student.42barcelona.co  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 19:29:35 by agrimald          #+#    #+#              #
-#    Updated: 2024/06/13 20:14:39 by agrimald         ###   ########.fr        #
+#    Updated: 2024/06/25 20:10:29 by agrimald         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Phonebook
 CPP = g++
-CPPFLAGS = -Wall -Werror -Wextra -std=c++98
+CPPFLAGS = -Wall -Werror -Wextra -g -fsanitize=address -std=c++98
 RM = rm -rf
 
 SRC = main.cpp contact.cpp phonebook.cpp

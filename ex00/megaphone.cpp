@@ -6,7 +6,7 @@
 /*   By: agrimald <agrimald@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:23:23 by agrimald          #+#    #+#             */
-/*   Updated: 2024/06/07 20:01:40 by agrimald         ###   ########.fr       */
+/*   Updated: 2024/06/13 17:03:36 by agrimald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-string	capitalized_word(string word)
+std::string	capitalized_word(std::string word)
 {
 	for(int i = 0; i < word.length(); i++)
 	{
-		word[i] = toupper(word[i]);
+		word[i] = std::toupper(word[i]);
 	}
 	return (word);
 }
@@ -30,13 +28,13 @@ int main(int argc, char **argv)
 	{
 		for (int i = 1; i < argc; ++i)
 		{
-			string word = argv[i];
-			cout<<capitalized_word(word);
+			std::string word = argv[i];
+			std::cout<<capitalized_word(word);
 			if (i < argc - 1)
-				cout<< " ";
+				std::cout<< " ";
 		}
 	}
 	else
-		cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *"<<endl;
+		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *"<<std::endl;
 	return (0);
 }

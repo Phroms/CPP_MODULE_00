@@ -15,16 +15,32 @@
 
 int main()
 {
-	Data prueba;
-	Phonebook  phonebook;
+	std::string	input;
+	Phonebook	phoneboook;
+	Data		contact;
 
-	init_program()
-	prueba.set_firstname(prueba.show_msg("First Name: "));
-	prueba.set_lastname(prueba.show_msg("Last Name: "));
-	prueba.set_nickname(prueba.show_msg("Nick Name: "));
-	prueba.set_phonenumber(prueba.show_msg("Phone Number: "));
-	prueba.set_darkestsecret(prueba.show_msg("Darkest Secret: "));
-	//print_contact(&prueba);
-	//phonebook.max_contacts(prueba.variable_value(&prueba,  "firstname"));    
+	phoneboook.init_program(0);
+	std::cout << "Write ADD, SEARCH o EXIT" << std::endl;
+	while (true)
+	{
+		if (!getline(std::cin, input))
+		{
+			if(std::cin.eof())
+			{
+				std::cout << "Input failure." << std::endl;
+				break;
+			}
+		}
+		if (input == "EXIT")
+			return (0);
+		else if (input == "ADD")
+			phoneboook.add(&contact);
+		else if (input == "SEARCH")
+		{
+			phoneboook.show_contact(&phoneboook);
+			phoneboook.search(&phoneboook);
+		}
+		std::cout << "Write ADD, SEARCH o EXIT" << std::endl;
+	}
 	return (0);
 }

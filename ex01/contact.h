@@ -14,8 +14,12 @@
 # define CONTACT_H
 
 # include <iostream>
-# include <stdlib.h>
 # include <string>
+# include <cstdlib>
+# include <cstring>
+# include <stdlib.h>
+# include <iomanip>
+
 
 class Data
 {
@@ -25,6 +29,7 @@ class Data
 		std::string nickName;
 		std::string phoneNumber;
 		std::string darkestSecret;
+
 	public:
 		Data();
 		~Data();

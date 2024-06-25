@@ -49,41 +49,12 @@ std::string Data::show_msg(std::string printmsg)
 
 void	Data::print_contact(Data *contend)
 {
-	/*
-	contend->firstName = funcion2("First Name: ");
-	contend->lastName = funcion2("Last Name: ");
-	contend->nickName = funcion2("Nick Name: "):
-	contend->phoneNumber = funcion2("Phone Number: ");
-	contend->darkestSecret = funcion2("Darkest Secret: ");
-	*/
-std::cout << "First Name: " << contend->variable_value(contend, "firstName") << std::endl;
-std::cout << "Last Name: " << contend->variable_value(contend, "lastName") << std::endl;
-std::cout << "Nick Name: " << contend->variable_value(contend, "nickName") << std::endl;
-std::cout << "Phone Number: " << contend->variable_value(contend, "phoneNumber") << std::endl;
-std::cout << "Darkest Secret: " << contend->variable_value(contend, "darkestSecret") << std::endl;
+	contend->firstName = show_msg("First Name: ");
+	contend->lastName = show_msg("Last Name: ");
+	contend->nickName = show_msg("Nick Name: ");
+	contend->phoneNumber = show_msg("Phone Number: ");
+	contend->darkestSecret = show_msg("Darkest Secret: ");
 }
-
-void	Data::set_firstname(std::string name)
-{
-	this->firstName = name;
-}
-void	Data::set_lastname(std::string last)
-{
-	this->lastName = last;
-}
-void	Data::set_nickname(std::string nick)
-{
-	this->nickName = nick;
-}
-void	Data::set_phonenumber(std::string number)
-{
-	this->phoneNumber = number;
-}
-void	Data::set_darkestsecret(std::string secret)
-{
-	this->darkestSecret = secret;
-}
-	
 
 Data::~Data()
 {

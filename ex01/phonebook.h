@@ -13,10 +13,6 @@
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
-# include <iostream>
-# include <stdlib.h>
-# include <string>
-
 #include "contact.h"
 
 class Phonebook
@@ -27,6 +23,9 @@ class Phonebook
     public:
         Phonebook();
         ~Phonebook();
-        void    max_contacts(Data *contact);
+        void    add(Data *contact);
+        void    show_contact(Phonebook *book);
+        void    init_program(int valeu);
+        void    search(Phonebook *phone);
 };
 #endif
